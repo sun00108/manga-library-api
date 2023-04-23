@@ -36,7 +36,7 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   # Devise install 给出的提示 - 配置 Action Mailer 的 default_url_options
-  config.action_mailer.default_url_options = { host: '192.168.88.69', port: 3000 }
+  config.action_mailer.default_url_options = { host: ENV['API_HOST'], port: ENV['API_PORT'] }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -66,4 +66,6 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  config.hosts << ENV['API_HOST']
 end
