@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
   def default_url_options
-    { host: '192.168.88.69', port: 3000 }
+    { host: ENV['API_HOST'], port: ENV['API_PORT'] }
   end
 end
