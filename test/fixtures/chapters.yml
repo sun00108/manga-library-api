@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manga: one
+  volume: one
+  number: 1
+
+two:
+  manga: two
+  volume: two
+  number: 1
